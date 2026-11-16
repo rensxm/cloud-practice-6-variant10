@@ -1,0 +1,12 @@
+{
+  "name": "cloud-files-api-variant10",
+  "version": "1.0.0",
+  "private": true,
+  "description": "№6 практикалық жұмыс: файлдар REST API және PostgreSQL",
+  "scripts": {
+    "start": "node init-db.js && node server.js",
+    "db:init": "node init-db.js"
+  },
+  "engines": { "node": ">=20" },
+  "dependencies": { "express": "^5.0.0", "pg": "^8.0.0" }
+}

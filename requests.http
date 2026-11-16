@@ -1,0 +1,20 @@
+@baseUrl = http://localhost:3000
+
+### Барлық жазбаны оқу
+GET {{baseUrl}}/api/files
+
+### Бір жазбаны оқу
+GET {{baseUrl}}/api/files/1
+
+### Жаңа жазба қосу
+POST {{baseUrl}}/api/files
+Content-Type: application/json
+
+{
+  "name": "зертхана.txt",
+  "content_type": "text/plain",
+  "size_bytes": 2048
+}
+
+### Құпиясыз конфигурация белгісін көру
+GET {{baseUrl}}/info

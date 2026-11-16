@@ -1,0 +1,139 @@
+{
+    "variant":  10,
+    "repository":  "https://github.com/rensxm/cloud-practice-6-variant10",
+    "serviceUrl":  "https://cloud-practice-6-variant10.onrender.com",
+    "initialChecks":  {
+                          "value":  [
+                                        {
+                                            "method":  "GET",
+                                            "url":  "http://localhost:3002/info",
+                                            "status":  200,
+                                            "body":  {
+                                                         "status":  "ok",
+                                                         "variant":  "10",
+                                                         "databaseConfigured":  true
+                                                     }
+                                        },
+                                        {
+                                            "method":  "GET",
+                                            "url":  "http://localhost:3002/api/files",
+                                            "status":  200,
+                                            "body":  {
+                                                         "value":  [
+                                                                       {
+                                                                           "id":  1,
+                                                                           "name":  "дәріс.pdf",
+                                                                           "content_type":  "application/pdf",
+                                                                           "size_bytes":  245760
+                                                                       },
+                                                                       {
+                                                                           "id":  2,
+                                                                           "name":  "таныстырылым.pptx",
+                                                                           "content_type":  "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                                                           "size_bytes":  1048576
+                                                                       },
+                                                                       {
+                                                                           "id":  3,
+                                                                           "name":  "конспект.txt",
+                                                                           "content_type":  "text/plain",
+                                                                           "size_bytes":  4096
+                                                                       }
+                                                                   ],
+                                                         "Count":  3
+                                                     }
+                                        },
+                                        {
+                                            "method":  "GET",
+                                            "url":  "http://localhost:3002/api/files/1",
+                                            "status":  200,
+                                            "body":  {
+                                                         "id":  1,
+                                                         "name":  "дәріс.pdf",
+                                                         "content_type":  "application/pdf",
+                                                         "size_bytes":  245760
+                                                     }
+                                        },
+                                        {
+                                            "method":  "GET",
+                                            "url":  "https://cloud-practice-6-variant10.onrender.com/info",
+                                            "status":  200,
+                                            "body":  {
+                                                         "status":  "ok",
+                                                         "variant":  "10",
+                                                         "databaseConfigured":  true
+                                                     }
+                                        },
+                                        {
+                                            "method":  "GET",
+                                            "url":  "https://cloud-practice-6-variant10.onrender.com/api/files",
+                                            "status":  200,
+                                            "body":  {
+                                                         "value":  [
+                                                                       {
+                                                                           "id":  1,
+                                                                           "name":  "дәріс.pdf",
+                                                                           "content_type":  "application/pdf",
+                                                                           "size_bytes":  245760
+                                                                       },
+                                                                       {
+                                                                           "id":  2,
+                                                                           "name":  "таныстырылым.pptx",
+                                                                           "content_type":  "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                                                                           "size_bytes":  1048576
+                                                                       },
+                                                                       {
+                                                                           "id":  3,
+                                                                           "name":  "конспект.txt",
+                                                                           "content_type":  "text/plain",
+                                                                           "size_bytes":  4096
+                                                                       }
+                                                                   ],
+                                                         "Count":  3
+                                                     }
+                                        },
+                                        {
+                                            "method":  "GET",
+                                            "url":  "https://cloud-practice-6-variant10.onrender.com/api/files/1",
+                                            "status":  200,
+                                            "body":  {
+                                                         "id":  1,
+                                                         "name":  "дәріс.pdf",
+                                                         "content_type":  "application/pdf",
+                                                         "size_bytes":  245760
+                                                     }
+                                        }
+                                    ],
+                          "Count":  6
+                      },
+    "post":  {
+                 "method":  "POST",
+                 "url":  "https://cloud-practice-6-variant10.onrender.com/api/files",
+                 "status":  201,
+                 "body":  {
+                              "id":  10,
+                              "name":  "зертхана.txt",
+                              "content_type":  "text/plain",
+                              "size_bytes":  2048
+                          }
+             },
+    "afterRestart":  {
+                         "method":  "GET",
+                         "url":  "https://cloud-practice-6-variant10.onrender.com/api/files/10",
+                         "status":  200,
+                         "body":  {
+                                      "id":  10,
+                                      "name":  "зертхана.txt",
+                                      "content_type":  "text/plain",
+                                      "size_bytes":  2048
+                                  }
+                     },
+    "finalCount":  4,
+    "diagnosis":  {
+                      "scope":  "Render runtime log",
+                      "code":  "3D000",
+                      "log":  "DB_INIT_ERROR 3D000",
+                      "badDeployment":  "https://dashboard.render.com/web/srv-dbt0reec6qcc73adfkk0/deploys/dep-dbt17goae00c739c5spg",
+                      "restoredDeployment":  "https://dashboard.render.com/web/srv-dbt0reec6qcc73adfkk0/deploys/dep-dbt18cei0phs73edgp3g",
+                      "restored":  true
+                  }
+}
